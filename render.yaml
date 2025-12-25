@@ -17,9 +17,8 @@ services:
     name: zpt-cinema-engine
     env: docker
     plan: free
-    # Fix: Context is Root, Path is explicit
-    dockerContext: .
-    dockerFilePath: ./backend/Dockerfile
+    # Fix: Use implicit Dockerfile lookup to assume backend/Dockerfile
+    dockerContext: ./backend
     envVars:
       - key: PORT
         value: 8081
