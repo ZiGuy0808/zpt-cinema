@@ -10,11 +10,7 @@ services:
       - key: NODE_VERSION
         value: 20.11.0
       - key: TMDB_API_KEY
-        generateValue: true # Placeholder asking user to fill it
-    routes:
-      - type: http
-        path: /
-        destination: /
+        sync: false # User must input this in the dashboard
 
   # 2. The Engine (MeTube Docker)
   - type: web
